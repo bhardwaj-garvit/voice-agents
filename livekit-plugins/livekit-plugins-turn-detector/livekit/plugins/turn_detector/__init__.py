@@ -37,8 +37,8 @@ class EOUPlugin(Plugin):
 
         for revision in MODEL_REVISIONS.values():
             AutoTokenizer.from_pretrained(HG_MODEL, revision=revision)
-            _download_from_hf_hub(HG_MODEL, ONNX_FILENAME, subfolder="onnx", revision=revision)
-            _download_from_hf_hub(HG_MODEL, "languages.json", revision=revision)
+            _download_from_hf_hub(HG_MODEL, ONNX_FILENAME, subfolder="onnx", revision=revision, local_files_only=False)
+            _download_from_hf_hub(HG_MODEL, "languages.json", revision=revision, local_files_only=False)
 
 
 Plugin.register_plugin(EOUPlugin())

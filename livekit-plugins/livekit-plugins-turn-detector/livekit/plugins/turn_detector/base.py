@@ -87,7 +87,7 @@ class _EUORunnerBase(_InferenceRunner):
                 ONNX_FILENAME,
                 subfolder="onnx",
                 revision=self._model_revision,
-                local_files_only=True,
+                local_files_only=False,
             )
             sess_options = ort.SessionOptions()
             sess_options.intra_op_num_threads = max(
@@ -167,7 +167,7 @@ class EOUModelBase(ABC):
                 HG_MODEL,
                 "languages.json",
                 revision=MODEL_REVISIONS[self._model_type],
-                local_files_only=True,
+                local_files_only=False,
             )
             with open(config_fname) as f:
                 self._languages = json.load(f)
