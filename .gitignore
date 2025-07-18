@@ -28,9 +28,11 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
-demos/plivo-outbound-calling/
+demos/plivo-outbound-calling/.venv/
+demos/plivo-outbound-calling/venv/
+demos/plivo-outbound-calling/.DS_Store
+demos/plivo-outbound-calling/.env.local
 .env.local
-
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
