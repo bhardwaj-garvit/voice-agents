@@ -74,7 +74,7 @@ class Assistant(Agent):
             llm=openai.LLM.with_azure(
                 azure_deployment="gpt-4o-mini",
                 azure_endpoint="https://nugget-sweden-central.openai.azure.com/", # or AZURE_OPENAI_ENDPOINT
-                api_key="EiLXnWVCejWHHJuopJZtkws3hOUzRsaaxnZFiYmD4g27AWOHCXUrJQQJ99BGACfhMk5XJ3w3AAABACOGFoiH", # or AZURE_OPENAI_API_KEY
+                api_key="", # or AZURE_OPENAI_API_KEY
                 api_version="2025-01-01-preview", # or OPENAI_API_VERSION
             ),
             # https://.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=
