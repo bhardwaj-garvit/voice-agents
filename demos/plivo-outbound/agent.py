@@ -71,7 +71,12 @@ class Assistant(Agent):
             #     # model="meta-llama/llama-4-scout-17b-16e-instruct",
             #     temperature=0.5,
             # ),  
-
+            llm=openai.LLM.with_azure(
+                azure_deployment="gpt-4o-mini",
+                azure_endpoint="https://nugget-sweden-central.openai.azure.com/", # or AZURE_OPENAI_ENDPOINT
+                api_key="", # or AZURE_OPENAI_API_KEY
+                api_version="2025-01-01-preview", # or OPENAI_API_VERSION
+            ),
             # https://.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=
             # tts=elevenlabs.TTS(
             #     voice_id="TRnaQb7q41oL7sV0w6Bu",
